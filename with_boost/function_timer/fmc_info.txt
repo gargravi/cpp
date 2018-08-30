@@ -1,0 +1,27 @@
+
+/usr/local/ra/code/RA/tp/common/include/fcm 
+    fcm -> /usr/local/rg/rg_git/cpp/with_boost/function_timer/src/fcm
+
+/usr/local/ra/code/argus/RiskAnalytics/Riskfort_comp/cygnets2/riskfort/build/rfbuild.lib.mk
+#export PRJ_RF_ARGUS_DID_SRVC_LIB = -larrfargusdidservice -lfunction_call_metric
+export PRJ_RF_ARGUS_DID_SRVC_LIB = -larrfargusdidservice -lfunction_call_metric -lboost_thread -lboost_timer
+
+usr/local/ra/code/RA
+ln -sT /usr/local/rg/rg_git/cpp/with_boost/function_timer/src/fcm/libfunction_call_metric.so libfunction_call_metric.so
+
+
+
+
+root@argus-load-txn-1:/usr/local/ra/code/RA/ecc/cygnets2/cygcore/output/linux64/lib]
+> find -iname "*function_call_metric*"
+./ecc/cygnets2/cygcore/output/linux64/lib/libfunction_call_metric.so
+root@argus-load-txn-1:/usr/local/ra/code/RA]
+
+
+=================================================================================================
+
+#define FUNCTION_CALL_METRIC_ENABLED 1
+#include "fcm/function_call_metric_client.h"
+
+
+FCM_PROFILE_THIS_POINT_TO_BLOCK_END("BUSINESS_OBJECT_API_CALL");
